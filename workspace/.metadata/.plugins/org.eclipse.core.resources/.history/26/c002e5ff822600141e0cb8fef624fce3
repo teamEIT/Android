@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.exe.layout.MainActivity"
+>
+
+	<EditText
+	    android:id="@+id/workEnter"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:lines="1"
+	    android:hint="@string/work_hint"
+	    android:textSize="24px" />
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	>
+	    <TextView 
+	        android:layout_width="60px"
+	        android:layout_height="wrap_content"
+	        android:text="@string/hour_edit"
+	        android:typeface="normal"
+	        android:textSize="15px"
+	        android:textStyle="bold"
+	        android:padding="5px"
+	    />
+	    <EditText 
+	    	android:id="@+id/hourEdit"
+	    	android:layout_width="45px"
+	    	android:layout_height="wrap_content"
+	    	android:hint="12"
+	    	android:textColorHint="@color/abc_search_url_text_normal"
+	    />
+	    <TextView 
+	    	android:layout_width="60px"
+	        android:layout_height="wrap_content"
+	        android:text="@string/minute_edit"
+	        android:typeface="normal"
+	        android:textSize="15px"
+	        android:textStyle="bold"
+	        android:padding="5px"    
+	    />
+	    <EditText 
+	    	android:id="@+id/minuteEdit"
+	    	android:layout_width="45px"
+	    	android:layout_height="wrap_content"
+	    	android:hint="60"
+	    	android:textColorHint="@color/abc_search_url_text_normal"
+	    />
+	</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.exe.layout.MainActivity"
+>
+	<EditText 
+	    android:id="@+id/workEnter"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	   	android:hint="@string/work_hint"
+	   	android:lines="1"
+	   	android:textSize="24px"
+	/>
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	>
+	    <TextView 
+	        android:layout_width="50px"
+	        android:layout_height="wrap_content"
+	        android:text="@string/hour_edit"
+	        android:typeface="normal"
+	        android:textSize="15px"
+	        android:textStyle="bold"
+	        android:padding="5px"
+	    />
+	    <EditText 
+	    	android:id="@+id/hourEdit"
+	    	android:layout_width="45px"
+	    	android:layout_height="wrap_content"
+	    	android:hint="12"
+	    	android:textColorHint="@color/hint_color"
+	    />
+	    <TextView 
+	    	android:layout_width="50px"
+	        android:layout_height="wrap_content"
+	        android:text="@string/minute_edit"
+	        android:typeface="normal"
+	        android:textSize="15px"
+	        android:textStyle="bold"
+	        android:padding="5px"    
+	    />
+	    
+	</LinearLayout>
+
+</LinearLayout>
