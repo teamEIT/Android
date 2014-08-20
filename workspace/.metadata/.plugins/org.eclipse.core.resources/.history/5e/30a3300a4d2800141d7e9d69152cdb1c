@@ -34,8 +34,8 @@ public class MainActivity extends Activity {
 	private OutputStream outStream = null;
 	
 	private BluetoothSocket mmSocket;
-	private InputStream mmInStream;
-	private OutputStream mmOutStream;
+	private final InputStream mmInStream;
+	private final OutputStream mmOutStream;
 	
 	private static final String TAG = "LEDOnOff";
 	// Insert your server's MAC address
@@ -130,16 +130,16 @@ public class MainActivity extends Activity {
 			tmpIn = socket.getInputStream();
 			tmpOut = socket.getOutputStream();
 		} catch (IOException e) {
-			
+			mmInStream = tmpIn;
+			mmOutStream = tmpOut;
 		}
-		mmInStream = tmpIn;
-		mmOutStream = tmpOut;
 	}
 	
 	public void write(byte[] buffer) {
 		try {
-			mmOutStream.write(buffer);
-		} catch (Exception e) {		
+			
+		} catch () {
+			
 		}
 	}
 	

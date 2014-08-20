@@ -139,7 +139,9 @@ public class MainActivity extends Activity {
 	public void write(byte[] buffer) {
 		try {
 			mmOutStream.write(buffer);
-		} catch (Exception e) {		
+			
+		} catch (Exception e) {
+			
 		}
 	}
 	

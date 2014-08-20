@@ -130,7 +130,6 @@ public class MainActivity extends Activity {
 			tmpIn = socket.getInputStream();
 			tmpOut = socket.getOutputStream();
 		} catch (IOException e) {
-			
 		}
 		mmInStream = tmpIn;
 		mmOutStream = tmpOut;
@@ -138,8 +137,9 @@ public class MainActivity extends Activity {
 	
 	public void write(byte[] buffer) {
 		try {
-			mmOutStream.write(buffer);
-		} catch (Exception e) {		
+			
+		} catch () {
+			
 		}
 	}
 	

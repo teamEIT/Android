@@ -1,7 +1,6 @@
 package com.exe.bluetooth;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,16 +32,11 @@ public class MainActivity extends Activity {
 	private BluetoothSocket btSocket = null;
 	private OutputStream outStream = null;
 	
-	private BluetoothSocket mmSocket;
-	private InputStream mmInStream;
-	private OutputStream mmOutStream;
-	
 	private static final String TAG = "LEDOnOff";
 	// Insert your server's MAC address
 	private static String address = "00:00:00:00:00:00";
 	// Well known SPP UUID
 	private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -120,27 +114,6 @@ public class MainActivity extends Activity {
 	public void visible(View view) {
 		Intent getVisible = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
 		startActivityForResult(getVisible, 0);
-	}
-	
-	public void ConnectThread(BluetoothSocket socket) {
-		mmSocket = socket;
-		InputStream tmpIn = null;
-		OutputStream tmpOut = null;
-		try {
-			tmpIn = socket.getInputStream();
-			tmpOut = socket.getOutputStream();
-		} catch (IOException e) {
-			
-		}
-		mmInStream = tmpIn;
-		mmOutStream = tmpOut;
-	}
-	
-	public void write(byte[] buffer) {
-		try {
-			mmOutStream.write(buffer);
-		} catch (Exception e) {		
-		}
 	}
 	
 }
